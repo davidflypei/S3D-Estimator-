@@ -2,11 +2,13 @@
 
 2. Use these for commit summary.(Part before -)
 
-    a)  Used Raid - Bug fixes
+    Used Raid - Bug fixes
 
-    b)  Used Febreze - Cleaning code
+    Used Febreze - Cleaning code
 
-    c)  Used Blood - Bug Flood or added new feature 
+    Used Blood - Bug Flood or added new feature
+    
+    Used Invent - Added small features that won't break it
   
 3. Use common sense. Dont put anything stupid in it.
 
