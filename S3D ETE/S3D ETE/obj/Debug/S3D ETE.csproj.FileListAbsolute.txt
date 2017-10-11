@@ -1,0 +1,20 @@
+F:\S3D ETE\S3D ETE\bin\Debug\S3D ETE.exe.config
+F:\S3D ETE\S3D ETE\bin\Debug\S3D ETE.exe
+F:\S3D ETE\S3D ETE\bin\Debug\S3D ETE.pdb
+F:\S3D ETE\S3D ETE\obj\Debug\S3D ETE.csprojResolveAssemblyReference.cache
+F:\S3D ETE\S3D ETE\obj\Debug\S3D_ETE.Form1.resources
+F:\S3D ETE\S3D ETE\obj\Debug\S3D_ETE.Properties.Resources.resources
+F:\S3D ETE\S3D ETE\obj\Debug\S3D ETE.csproj.GenerateResource.Cache
+F:\S3D ETE\S3D ETE\obj\Debug\S3D ETE.csproj.CoreCompileInputs.cache
+F:\S3D ETE\S3D ETE\obj\Debug\S3D ETE.exe
+F:\S3D ETE\S3D ETE\obj\Debug\S3D ETE.pdb
+D:\S3D ETE\S3D ETE\bin\Debug\S3D ETE.exe.config
+D:\S3D ETE\S3D ETE\bin\Debug\S3D ETE.exe
+D:\S3D ETE\S3D ETE\bin\Debug\S3D ETE.pdb
+D:\S3D ETE\S3D ETE\obj\Debug\S3D ETE.csprojResolveAssemblyReference.cache
+D:\S3D ETE\S3D ETE\obj\Debug\S3D_ETE.Form1.resources
+D:\S3D ETE\S3D ETE\obj\Debug\S3D_ETE.Properties.Resources.resources
+D:\S3D ETE\S3D ETE\obj\Debug\S3D ETE.csproj.GenerateResource.Cache
+D:\S3D ETE\S3D ETE\obj\Debug\S3D ETE.csproj.CoreCompileInputs.cache
+D:\S3D ETE\S3D ETE\obj\Debug\S3D ETE.exe
+D:\S3D ETE\S3D ETE\obj\Debug\S3D ETE.pdb
