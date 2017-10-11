@@ -1,8 +1,5 @@
 <?xml version='1.0' ?>
 <printers>
-	<printer>
-		number 1
-	</printer>
 	<error>
 		1.5
 	</error>

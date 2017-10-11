@@ -128,7 +128,7 @@ namespace S3D_ETE
         {
 
             //Settup XML
-            XmlTextReader errorReader = new XmlTextReader(Path.Combine(System.Reflection.Assembly.GetEntryAssembly().Location, "\\printers.xml"));
+            XmlTextReader errorReader = new XmlTextReader(@"printers.xml");
             XmlReaderSettings settings = new XmlReaderSettings();
             settings.IgnoreWhitespace = true;
 

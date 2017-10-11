@@ -18,3 +18,13 @@ D:\S3D ETE\S3D ETE\obj\Debug\S3D ETE.csproj.GenerateResource.Cache
 D:\S3D ETE\S3D ETE\obj\Debug\S3D ETE.csproj.CoreCompileInputs.cache
 D:\S3D ETE\S3D ETE\obj\Debug\S3D ETE.exe
 D:\S3D ETE\S3D ETE\obj\Debug\S3D ETE.pdb
+V:\David\S3D-Estimator-\S3D ETE\S3D ETE\bin\Debug\S3D ETE.exe.config
+V:\David\S3D-Estimator-\S3D ETE\S3D ETE\bin\Debug\S3D ETE.exe
+V:\David\S3D-Estimator-\S3D ETE\S3D ETE\bin\Debug\S3D ETE.pdb
+V:\David\S3D-Estimator-\S3D ETE\S3D ETE\obj\Debug\S3D ETE.csprojResolveAssemblyReference.cache
+V:\David\S3D-Estimator-\S3D ETE\S3D ETE\obj\Debug\S3D_ETE.Form1.resources
+V:\David\S3D-Estimator-\S3D ETE\S3D ETE\obj\Debug\S3D_ETE.Properties.Resources.resources
+V:\David\S3D-Estimator-\S3D ETE\S3D ETE\obj\Debug\S3D ETE.csproj.GenerateResource.Cache
+V:\David\S3D-Estimator-\S3D ETE\S3D ETE\obj\Debug\S3D ETE.csproj.CoreCompileInputs.cache
+V:\David\S3D-Estimator-\S3D ETE\S3D ETE\obj\Debug\S3D ETE.exe
+V:\David\S3D-Estimator-\S3D ETE\S3D ETE\obj\Debug\S3D ETE.pdb
