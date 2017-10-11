@@ -1,4 +1,27 @@
-﻿using System;
+﻿//=============================================================================================================================
+//==                                                      Discription                                                        ==
+//=============================================================================================================================
+//
+//S3D Estimator
+//This program gives you a closer estimate of the time it will take to print something then Simplify3D by taking the error
+//from previous prints and multiplying S3D's time by that error amount. 
+//
+//=============================================================================================================================
+//==                                                        Creator                                                          ==
+//=============================================================================================================================
+//
+//David McKenna(3centsMcKenna Github: davidflypei)
+//
+//=============================================================================================================================
+//==                                                      Contributers                                                       ==
+//=============================================================================================================================
+//
+//
+//
+//
+
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,20 +30,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
-
 using System.Xml;
 using System.IO;
 using System.Text.RegularExpressions;
+using System.Configuration;
+
+
+
 namespace S3D_ETE
 {
 
 
     public partial class Form1 : Form
     {
+        //Vars
         int intS3DTime;
         double intEstTime;
-        double intError = 1;
+        double intError = 0;
         double intError2 = 1;
         double intFinTime;
         public double[] aryError = new double[10];
@@ -39,6 +65,7 @@ namespace S3D_ETE
 
         }
 
+        //When Get print time is clicked calculate the time
         private void cmdGetPrint_Click(object sender, EventArgs e)
         {
             getXML();
@@ -50,9 +77,14 @@ namespace S3D_ETE
             getTimes(1);
             getXML();
             intError2 = intFinTime / intS3DTime;
-            //intError2 = (aryError[0] + intError2) / 2;
+
+            if (aryError[0] != 0)
+            {
+                intError2 = (aryError[0] + intError2) / 2;
+            }
+
             txtError.Text = intError2.ToString();
-            // Save the document to a file and auto-indent the output.
+            //Save the document to a file and auto-indent the output.
             XmlTextWriter writer = new XmlTextWriter(Path.Combine(Environment.CurrentDirectory, "\\printers.xml"), null);
             writer.WriteStartDocument();
             writer.WriteStartElement("Error");
@@ -78,32 +110,46 @@ namespace S3D_ETE
 
         public void estCalc()
         {
-            getTimes(0);
+            //Get the error from array (0 for now till multi printer is created
             intError = aryError[0];
+
+            if (intError == 0)
+            {
+                intError = 1;
+            }
+
+            getTimes(0);
             intEstTime = intS3DTime * intError;
             TimeSpan strEstTime = TimeSpan.FromMinutes(intEstTime);
             txtEstTime.Text = $"{strEstTime:hh\\:mm}";
-
         }
 
         public void getXML()
         {
-            XmlTextReader errorReader = new XmlTextReader(Path.Combine(Environment.CurrentDirectory, "\\printers.xml"));
+
+            //Settup XML
+            XmlTextReader errorReader = new XmlTextReader(Path.Combine(System.Reflection.Assembly.GetEntryAssembly().Location, "\\printers.xml"));
             XmlReaderSettings settings = new XmlReaderSettings();
             settings.IgnoreWhitespace = true;
 
             errorReader.Read();
 
+            //Set the array position to 0
             int i = 0;
+
+            //While reading the XML store the values in array
             while (errorReader.Read())
             {
+                //Dont add value to array if the node is not of type text
                 if (errorReader.NodeType == XmlNodeType.Text)
                 {
                     string error = errorReader.Value;
                     aryError[i] = Convert.ToDouble(error);
+                    //+1 in array
                     i = i + 1;
                 }
             }
+            //Close reader
             errorReader.Close();
         }
 

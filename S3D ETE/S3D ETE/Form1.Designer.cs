@@ -63,36 +63,40 @@
             // 
             // s3dTimeHour
             // 
-            this.s3dTimeHour.Location = new System.Drawing.Point(31, 100);
+            this.s3dTimeHour.Location = new System.Drawing.Point(41, 123);
+            this.s3dTimeHour.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.s3dTimeHour.Maximum = new decimal(new int[] {
             500,
             0,
             0,
             0});
             this.s3dTimeHour.Name = "s3dTimeHour";
-            this.s3dTimeHour.Size = new System.Drawing.Size(43, 20);
+            this.s3dTimeHour.Size = new System.Drawing.Size(57, 22);
             this.s3dTimeHour.TabIndex = 0;
             // 
             // s3dTimeMin
             // 
-            this.s3dTimeMin.Location = new System.Drawing.Point(106, 100);
+            this.s3dTimeMin.Location = new System.Drawing.Point(141, 123);
+            this.s3dTimeMin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.s3dTimeMin.Maximum = new decimal(new int[] {
             500,
             0,
             0,
             0});
             this.s3dTimeMin.Name = "s3dTimeMin";
-            this.s3dTimeMin.Size = new System.Drawing.Size(43, 20);
+            this.s3dTimeMin.Size = new System.Drawing.Size(57, 22);
             this.s3dTimeMin.TabIndex = 1;
             // 
             // menuStrip1
             // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menuFile,
             this.menuHelp});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(433, 24);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(577, 28);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -104,31 +108,31 @@
             this.menuFileImport,
             this.menuFileExit});
             this.menuFile.Name = "menuFile";
-            this.menuFile.Size = new System.Drawing.Size(37, 20);
+            this.menuFile.Size = new System.Drawing.Size(44, 24);
             this.menuFile.Text = "File";
             // 
             // menuFileManage
             // 
             this.menuFileManage.Name = "menuFileManage";
-            this.menuFileManage.Size = new System.Drawing.Size(160, 22);
+            this.menuFileManage.Size = new System.Drawing.Size(191, 26);
             this.menuFileManage.Text = "Manage Printers";
             // 
             // menuFileExport
             // 
             this.menuFileExport.Name = "menuFileExport";
-            this.menuFileExport.Size = new System.Drawing.Size(160, 22);
+            this.menuFileExport.Size = new System.Drawing.Size(191, 26);
             this.menuFileExport.Text = "Export Printer";
             // 
             // menuFileImport
             // 
             this.menuFileImport.Name = "menuFileImport";
-            this.menuFileImport.Size = new System.Drawing.Size(160, 22);
+            this.menuFileImport.Size = new System.Drawing.Size(191, 26);
             this.menuFileImport.Text = "Import Printer";
             // 
             // menuFileExit
             // 
             this.menuFileExit.Name = "menuFileExit";
-            this.menuFileExit.Size = new System.Drawing.Size(160, 22);
+            this.menuFileExit.Size = new System.Drawing.Size(191, 26);
             this.menuFileExit.Text = "Exit";
             // 
             // menuHelp
@@ -136,98 +140,107 @@
             this.menuHelp.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menuHelpAbout});
             this.menuHelp.Name = "menuHelp";
-            this.menuHelp.Size = new System.Drawing.Size(44, 20);
+            this.menuHelp.Size = new System.Drawing.Size(53, 24);
             this.menuHelp.Text = "Help";
             // 
             // menuHelpAbout
             // 
             this.menuHelpAbout.Name = "menuHelpAbout";
-            this.menuHelpAbout.Size = new System.Drawing.Size(107, 22);
+            this.menuHelpAbout.Size = new System.Drawing.Size(125, 26);
             this.menuHelpAbout.Text = "About";
             // 
             // lblS3D
             // 
             this.lblS3D.AutoSize = true;
-            this.lblS3D.Location = new System.Drawing.Point(37, 84);
+            this.lblS3D.Location = new System.Drawing.Point(49, 103);
+            this.lblS3D.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblS3D.Name = "lblS3D";
-            this.lblS3D.Size = new System.Drawing.Size(129, 13);
+            this.lblS3D.Size = new System.Drawing.Size(173, 17);
             this.lblS3D.TabIndex = 5;
             this.lblS3D.Text = "Simplify3D estimated time.";
             // 
             // lblS3DHour
             // 
             this.lblS3DHour.AutoSize = true;
-            this.lblS3DHour.Location = new System.Drawing.Point(77, 102);
+            this.lblS3DHour.Location = new System.Drawing.Point(103, 126);
+            this.lblS3DHour.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblS3DHour.Name = "lblS3DHour";
-            this.lblS3DHour.Size = new System.Drawing.Size(23, 13);
+            this.lblS3DHour.Size = new System.Drawing.Size(30, 17);
             this.lblS3DHour.TabIndex = 6;
             this.lblS3DHour.Text = "Hrs";
             // 
             // lblS3DMin
             // 
             this.lblS3DMin.AutoSize = true;
-            this.lblS3DMin.Location = new System.Drawing.Point(155, 102);
+            this.lblS3DMin.Location = new System.Drawing.Point(207, 126);
+            this.lblS3DMin.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblS3DMin.Name = "lblS3DMin";
-            this.lblS3DMin.Size = new System.Drawing.Size(24, 13);
+            this.lblS3DMin.Size = new System.Drawing.Size(30, 17);
             this.lblS3DMin.TabIndex = 7;
             this.lblS3DMin.Text = "Min";
             // 
             // lblFinTimeMin
             // 
             this.lblFinTimeMin.AutoSize = true;
-            this.lblFinTimeMin.Location = new System.Drawing.Point(372, 102);
+            this.lblFinTimeMin.Location = new System.Drawing.Point(496, 126);
+            this.lblFinTimeMin.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFinTimeMin.Name = "lblFinTimeMin";
-            this.lblFinTimeMin.Size = new System.Drawing.Size(24, 13);
+            this.lblFinTimeMin.Size = new System.Drawing.Size(30, 17);
             this.lblFinTimeMin.TabIndex = 12;
             this.lblFinTimeMin.Text = "Min";
             // 
             // lblFinTimeHour
             // 
             this.lblFinTimeHour.AutoSize = true;
-            this.lblFinTimeHour.Location = new System.Drawing.Point(294, 102);
+            this.lblFinTimeHour.Location = new System.Drawing.Point(392, 126);
+            this.lblFinTimeHour.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFinTimeHour.Name = "lblFinTimeHour";
-            this.lblFinTimeHour.Size = new System.Drawing.Size(23, 13);
+            this.lblFinTimeHour.Size = new System.Drawing.Size(30, 17);
             this.lblFinTimeHour.TabIndex = 11;
             this.lblFinTimeHour.Text = "Hrs";
             // 
             // lblFinTime
             // 
             this.lblFinTime.AutoSize = true;
-            this.lblFinTime.Location = new System.Drawing.Point(285, 84);
+            this.lblFinTime.Location = new System.Drawing.Point(380, 103);
+            this.lblFinTime.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFinTime.Name = "lblFinTime";
-            this.lblFinTime.Size = new System.Drawing.Size(71, 13);
+            this.lblFinTime.Size = new System.Drawing.Size(95, 17);
             this.lblFinTime.TabIndex = 10;
             this.lblFinTime.Text = "Finished time.";
             // 
             // finTimeMin
             // 
-            this.finTimeMin.Location = new System.Drawing.Point(323, 100);
+            this.finTimeMin.Location = new System.Drawing.Point(431, 123);
+            this.finTimeMin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.finTimeMin.Maximum = new decimal(new int[] {
             500,
             0,
             0,
             0});
             this.finTimeMin.Name = "finTimeMin";
-            this.finTimeMin.Size = new System.Drawing.Size(43, 20);
+            this.finTimeMin.Size = new System.Drawing.Size(57, 22);
             this.finTimeMin.TabIndex = 9;
             // 
             // finTimeHour
             // 
-            this.finTimeHour.Location = new System.Drawing.Point(248, 100);
+            this.finTimeHour.Location = new System.Drawing.Point(331, 123);
+            this.finTimeHour.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.finTimeHour.Maximum = new decimal(new int[] {
             500,
             0,
             0,
             0});
             this.finTimeHour.Name = "finTimeHour";
-            this.finTimeHour.Size = new System.Drawing.Size(43, 20);
+            this.finTimeHour.Size = new System.Drawing.Size(57, 22);
             this.finTimeHour.TabIndex = 8;
             // 
             // cmdGetPrint
             // 
-            this.cmdGetPrint.Location = new System.Drawing.Point(31, 126);
+            this.cmdGetPrint.Location = new System.Drawing.Point(41, 155);
+            this.cmdGetPrint.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmdGetPrint.Name = "cmdGetPrint";
-            this.cmdGetPrint.Size = new System.Drawing.Size(103, 20);
+            this.cmdGetPrint.Size = new System.Drawing.Size(137, 25);
             this.cmdGetPrint.TabIndex = 13;
             this.cmdGetPrint.Text = "Get Print Time";
             this.cmdGetPrint.UseVisualStyleBackColor = true;
@@ -236,43 +249,49 @@
             // lblEst
             // 
             this.lblEst.AutoSize = true;
-            this.lblEst.Location = new System.Drawing.Point(28, 166);
+            this.lblEst.Location = new System.Drawing.Point(37, 204);
+            this.lblEst.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEst.Name = "lblEst";
-            this.lblEst.Size = new System.Drawing.Size(106, 13);
+            this.lblEst.Size = new System.Drawing.Size(142, 17);
             this.lblEst.TabIndex = 14;
             this.lblEst.Text = "Estimated Print Time:";
             // 
             // cbxPrinter
             // 
             this.cbxPrinter.FormattingEnabled = true;
-            this.cbxPrinter.Location = new System.Drawing.Point(197, 27);
+            this.cbxPrinter.Location = new System.Drawing.Point(263, 33);
+            this.cbxPrinter.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbxPrinter.Name = "cbxPrinter";
-            this.cbxPrinter.Size = new System.Drawing.Size(120, 21);
+            this.cbxPrinter.Size = new System.Drawing.Size(159, 24);
             this.cbxPrinter.TabIndex = 15;
+            this.cbxPrinter.Text = "Feature Not avaiable";
             // 
             // lblPrinter
             // 
             this.lblPrinter.AutoSize = true;
-            this.lblPrinter.Location = new System.Drawing.Point(118, 30);
+            this.lblPrinter.Location = new System.Drawing.Point(157, 37);
+            this.lblPrinter.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPrinter.Name = "lblPrinter";
-            this.lblPrinter.Size = new System.Drawing.Size(73, 13);
+            this.lblPrinter.Size = new System.Drawing.Size(97, 17);
             this.lblPrinter.TabIndex = 16;
             this.lblPrinter.Text = "Select Printer:";
             // 
             // txtEstTime
             // 
             this.txtEstTime.BackColor = System.Drawing.Color.LimeGreen;
-            this.txtEstTime.Location = new System.Drawing.Point(31, 182);
+            this.txtEstTime.Location = new System.Drawing.Point(41, 224);
+            this.txtEstTime.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtEstTime.Name = "txtEstTime";
             this.txtEstTime.ReadOnly = true;
-            this.txtEstTime.Size = new System.Drawing.Size(103, 20);
+            this.txtEstTime.Size = new System.Drawing.Size(136, 22);
             this.txtEstTime.TabIndex = 17;
             // 
             // cmdGetError
             // 
-            this.cmdGetError.Location = new System.Drawing.Point(248, 126);
+            this.cmdGetError.Location = new System.Drawing.Point(331, 155);
+            this.cmdGetError.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmdGetError.Name = "cmdGetError";
-            this.cmdGetError.Size = new System.Drawing.Size(103, 20);
+            this.cmdGetError.Size = new System.Drawing.Size(137, 25);
             this.cmdGetError.TabIndex = 18;
             this.cmdGetError.Text = "Submit Times";
             this.cmdGetError.UseVisualStyleBackColor = true;
@@ -281,26 +300,28 @@
             // txtError
             // 
             this.txtError.BackColor = System.Drawing.Color.Red;
-            this.txtError.Location = new System.Drawing.Point(248, 182);
+            this.txtError.Location = new System.Drawing.Point(331, 224);
+            this.txtError.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtError.Name = "txtError";
             this.txtError.ReadOnly = true;
-            this.txtError.Size = new System.Drawing.Size(103, 20);
+            this.txtError.Size = new System.Drawing.Size(136, 22);
             this.txtError.TabIndex = 20;
             // 
             // lblError
             // 
             this.lblError.AutoSize = true;
-            this.lblError.Location = new System.Drawing.Point(245, 166);
+            this.lblError.Location = new System.Drawing.Point(327, 204);
+            this.lblError.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblError.Name = "lblError";
-            this.lblError.Size = new System.Drawing.Size(59, 13);
+            this.lblError.Size = new System.Drawing.Size(80, 17);
             this.lblError.TabIndex = 19;
             this.lblError.Text = "Total Error:";
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(433, 364);
+            this.ClientSize = new System.Drawing.Size(577, 448);
             this.Controls.Add(this.txtError);
             this.Controls.Add(this.lblError);
             this.Controls.Add(this.cmdGetError);
@@ -321,6 +342,7 @@
             this.Controls.Add(this.s3dTimeHour);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form1";
             this.Text = "S3D Time Estimator";
             this.Load += new System.EventHandler(this.Form1_Load);
