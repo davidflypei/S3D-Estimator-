@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Printers>
 	<Printer>
-		<Error>2</Error>
+		<PrinterName>Printer 1</PrinterName>
+		<Error>1</Error>
 	</Printer>
 </Printers>

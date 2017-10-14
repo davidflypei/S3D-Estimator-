@@ -52,8 +52,7 @@ namespace S3D_ETE
         public double[] aryError = new double[10];
         public string[] aryPrinter = new string[10];
         string printerPath = @"printers.xml";
-        string printerName;
-        string errorVal;
+        string printer;
 
         //XML Settings
         XmlWriterSettings settings = new XmlWriterSettings()
@@ -75,7 +74,13 @@ namespace S3D_ETE
         {
             if (!File.Exists(printerPath))
             {
-                writeXML(printerName, errorVal);
+                writeXML("Printer 1", "1");
+            }
+
+            readXML();
+            int i = 0;
+            while(aryPrinter[i] != null){
+                cbxPrinter.Items.Add(aryPrinter[i]);
             }
         }
 
@@ -100,7 +105,9 @@ namespace S3D_ETE
 
             txtError.Text = intError2.ToString();
 
-            writeXML(printerName, intError2.ToString());
+            printer = cbxPrinter.SelectedValue.ToString();
+
+            writeXML(printer, intError2.ToString());
 
 
         }
@@ -142,31 +149,44 @@ namespace S3D_ETE
             errorReader.Read();
 
             //Set the array position to 0
-            int i = 0;
+            int y = 0;
+            int x = 0;
+            string Val;
 
             //While reading the XML store the values in array
             while (errorReader.Read())
             {
-                //Dont add value to array if the node is not of type text
-                if (errorReader.NodeType == XmlNodeType.Text)
-                {
-                    string error = errorReader.Value;
-                    aryError[i] = Convert.ToDouble(error);
-                    //+1 in array
-                    i = i + 1;
-                }
+                //Dont add value to array if the element is not on this list
+                    switch (errorReader.Name)
+                    {
+                        case "Error":
+                         errorReader.Read();
+                            Val = errorReader.Value;
+                            aryError[x] = Convert.ToDouble(Val);
+                            //+1 in array
+                            x = x + 1;
+                            break;
+                    case "PrinterName":
+                            errorReader.Read();
+                            Val = errorReader.Value;
+                            aryPrinter[y] = Val.ToString();
+                            //+1 in array
+                            y = y + 1;
+                            break;
+                    }
             }
             //Close reader
             errorReader.Close();
         }
 
         //Save the document to a file and auto-indent the output.
-        public void writeXML(string printerName, string errorVal)
+        public void writeXML(string printerName , string errorVal)
         {
             XmlWriter writer = XmlWriter.Create(printerPath, settings);
             writer.WriteStartDocument();
             writer.WriteStartElement("Printers");
             writer.WriteStartElement("Printer");
+            writer.WriteElementString("PrinterName", printerName);
             writer.WriteElementString("Error", errorVal);
             writer.WriteEndElement();
             writer.WriteEndElement();
