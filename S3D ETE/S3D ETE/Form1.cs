@@ -75,18 +75,7 @@ namespace S3D_ETE
         {
             if (!File.Exists(printerPath))
             {
-                XmlWriter writer = XmlWriter.Create(printerPath, settings);
-                writer.WriteStartDocument();
-                writer.WriteStartElement("Printers");
-                writer.WriteStartElement("Printer");
-                writer.WriteElementString("PrinterName", "Printer 1");
-                writer.WriteElementString("Error", "1");
-                writer.WriteEndElement();
-                writer.WriteEndElement();
-                writer.WriteEndDocument();
-                writer.Flush();
-                writer.Close();
-
+                writeXML(printerName, errorVal);
             }
         }
 
@@ -101,16 +90,17 @@ namespace S3D_ETE
         {
             getValues(1);
             readXML();
+
             intError2 = intFinTime / intS3DTime;
 
-            if (aryError[0] != 0)
+            if (aryError[0] < 1)
             {
                 intError2 = (aryError[0] + intError2) / 2;
             }
 
             txtError.Text = intError2.ToString();
 
-            writeXML(printerName, errorVal);
+            writeXML(printerName, intError2.ToString());
 
 
         }
@@ -177,7 +167,6 @@ namespace S3D_ETE
             writer.WriteStartDocument();
             writer.WriteStartElement("Printers");
             writer.WriteStartElement("Printer");
-            writer.WriteElementString("PrinterName", printerName);
             writer.WriteElementString("Error", errorVal);
             writer.WriteEndElement();
             writer.WriteEndElement();
