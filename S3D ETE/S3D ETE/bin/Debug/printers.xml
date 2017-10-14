@@ -1,6 +1,7 @@
-<?xml version='1.0' ?>
-<printers>
-	<error>
-		1.5
-	</error>
-</printers>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Printers>
+	<Printer>
+		<PrinterName>Printer 1</PrinterName>
+		<Error>1</Error>
+	</Printer>
+</Printers>

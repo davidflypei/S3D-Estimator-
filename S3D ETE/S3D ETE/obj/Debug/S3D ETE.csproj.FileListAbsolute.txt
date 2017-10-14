@@ -28,3 +28,13 @@ V:\David\S3D-Estimator-\S3D ETE\S3D ETE\obj\Debug\S3D ETE.csproj.GenerateResourc
 V:\David\S3D-Estimator-\S3D ETE\S3D ETE\obj\Debug\S3D ETE.csproj.CoreCompileInputs.cache
 V:\David\S3D-Estimator-\S3D ETE\S3D ETE\obj\Debug\S3D ETE.exe
 V:\David\S3D-Estimator-\S3D ETE\S3D ETE\obj\Debug\S3D ETE.pdb
+C:\Users\greathobbies\Documents\David\S3D-Estimator-\S3D ETE\S3D ETE\bin\Debug\S3D ETE.exe.config
+C:\Users\greathobbies\Documents\David\S3D-Estimator-\S3D ETE\S3D ETE\bin\Debug\S3D ETE.exe
+C:\Users\greathobbies\Documents\David\S3D-Estimator-\S3D ETE\S3D ETE\bin\Debug\S3D ETE.pdb
+C:\Users\greathobbies\Documents\David\S3D-Estimator-\S3D ETE\S3D ETE\obj\Debug\S3D ETE.csprojResolveAssemblyReference.cache
+C:\Users\greathobbies\Documents\David\S3D-Estimator-\S3D ETE\S3D ETE\obj\Debug\S3D_ETE.Form1.resources
+C:\Users\greathobbies\Documents\David\S3D-Estimator-\S3D ETE\S3D ETE\obj\Debug\S3D_ETE.Properties.Resources.resources
+C:\Users\greathobbies\Documents\David\S3D-Estimator-\S3D ETE\S3D ETE\obj\Debug\S3D ETE.csproj.GenerateResource.Cache
+C:\Users\greathobbies\Documents\David\S3D-Estimator-\S3D ETE\S3D ETE\obj\Debug\S3D ETE.csproj.CoreCompileInputs.cache
+C:\Users\greathobbies\Documents\David\S3D-Estimator-\S3D ETE\S3D ETE\obj\Debug\S3D ETE.exe
+C:\Users\greathobbies\Documents\David\S3D-Estimator-\S3D ETE\S3D ETE\obj\Debug\S3D ETE.pdb

@@ -51,31 +51,56 @@ namespace S3D_ETE
         double intFinTime;
         public double[] aryError = new double[10];
         public string[] aryPrinter = new string[10];
+        string printerPath = @"printers.xml";
+        string printerName;
+        string errorVal;
 
+        //XML Settings
+        XmlWriterSettings settings = new XmlWriterSettings()
+        {
+            Indent = true,
+            IndentChars = ("\t")
+        };
 
 
         public Form1()
         {
             InitializeComponent();
 
+
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            if (!File.Exists(printerPath))
+            {
+                XmlWriter writer = XmlWriter.Create(printerPath, settings);
+                writer.WriteStartDocument();
+                writer.WriteStartElement("Printers");
+                writer.WriteStartElement("Printer");
+                writer.WriteElementString("PrinterName", "Printer 1");
+                writer.WriteElementString("Error", "1");
+                writer.WriteEndElement();
+                writer.WriteEndElement();
+                writer.WriteEndDocument();
+                writer.Flush();
+                writer.Close();
 
+            }
         }
 
         //When Get print time is clicked calculate the time
         private void cmdGetPrint_Click(object sender, EventArgs e)
         {
-            getXML();
+            readXML();
             estCalc();
         }
 
         private void cmdGetError_Click(object sender, EventArgs e)
         {
-            getTimes(1);
-            getXML();
+            getValues(1);
+            readXML();
             intError2 = intFinTime / intS3DTime;
 
             if (aryError[0] != 0)
@@ -84,18 +109,13 @@ namespace S3D_ETE
             }
 
             txtError.Text = intError2.ToString();
-            //Save the document to a file and auto-indent the output.
-            XmlTextWriter writer = new XmlTextWriter(Path.Combine(Environment.CurrentDirectory, "\\printers.xml"), null);
-            writer.WriteStartDocument();
-            writer.WriteStartElement("Error");
-            writer.WriteString(intError2.ToString());
-            writer.WriteEndElement();
-            writer.WriteEndDocument();
-            writer.Close();
+
+            writeXML(printerName, errorVal);
+
 
         }
 
-        public void getTimes(int intGet)
+        public void getValues(int intGet)
         {
             if (intGet == 0)
             {
@@ -118,20 +138,17 @@ namespace S3D_ETE
                 intError = 1;
             }
 
-            getTimes(0);
+            getValues(0);
             intEstTime = intS3DTime * intError;
             TimeSpan strEstTime = TimeSpan.FromMinutes(intEstTime);
             txtEstTime.Text = $"{strEstTime:hh\\:mm}";
         }
 
-        public void getXML()
+        public void readXML()
         {
 
-            //Settup XML
-            XmlTextReader errorReader = new XmlTextReader(@"printers.xml");
-            XmlReaderSettings settings = new XmlReaderSettings();
-            settings.IgnoreWhitespace = true;
-
+            XmlTextReader errorReader = new XmlTextReader(printerPath);
+            //Setup XML
             errorReader.Read();
 
             //Set the array position to 0
@@ -151,6 +168,22 @@ namespace S3D_ETE
             }
             //Close reader
             errorReader.Close();
+        }
+
+        //Save the document to a file and auto-indent the output.
+        public void writeXML(string printerName, string errorVal)
+        {
+            XmlWriter writer = XmlWriter.Create(printerPath, settings);
+            writer.WriteStartDocument();
+            writer.WriteStartElement("Printers");
+            writer.WriteStartElement("Printer");
+            writer.WriteElementString("PrinterName", printerName);
+            writer.WriteElementString("Error", errorVal);
+            writer.WriteEndElement();
+            writer.WriteEndElement();
+            writer.WriteEndDocument();
+            writer.Flush();
+            writer.Close();
         }
 
 
