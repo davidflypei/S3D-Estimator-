@@ -106,8 +106,7 @@ namespace S3D_ETE
 
             txtError.Text = intError2.ToString();
 
-            printer = cbxPrinter.SelectedValue.ToString();
-
+            printer = cbxPrinter.SelectedText.ToString();
             writeXML(printer, intError2.ToString());
 
 
@@ -165,19 +164,35 @@ namespace S3D_ETE
                     {
                         case "Error":
                             errorReader.Read();
-                            Val = errorReader.Value;
-                            aryError[x] = Convert.ToDouble(Val);
-                            //+1 in array
-                            x = x + 1;
-                            pass = 1;
+                            if (errorReader.NodeType == XmlNodeType.Whitespace)
+                            {
+                                errorReader.Close();
+                                writeXML("Unnamed", "1");
+                            }
+                            else
+                            {
+                                Val = errorReader.Value;
+                                aryError[x] = Convert.ToDouble(Val);
+                                //+1 in array
+                                x = x + 1;
+                                pass = 1;
+                            }
                             break;
                         case "PrinterName":
                             errorReader.Read();
-                            Val = errorReader.Value;
-                            aryPrinter[y] = Val.ToString();
-                            //+1 in array
-                            y = y + 1;
-                            pass = 1;
+                            if (errorReader.NodeType == XmlNodeType.Whitespace)
+                            {
+                                errorReader.Close();
+                                writeXML("Unnamed", "1");
+                            }
+                            else
+                            {
+                                Val = errorReader.Value;
+                                aryPrinter[y] = Val.ToString();
+                                //+1 in array
+                                y = y + 1;
+                                pass = 1;
+                            }
                             break;
                     }
                 }
