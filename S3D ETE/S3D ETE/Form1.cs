@@ -81,6 +81,7 @@ namespace S3D_ETE
             int i = 0;
             while(aryPrinter[i] != null){
                 cbxPrinter.Items.Add(aryPrinter[i]);
+                i = i + 1;
             }
         }
 
@@ -151,29 +152,39 @@ namespace S3D_ETE
             //Set the array position to 0
             int y = 0;
             int x = 0;
+            int pass = 0;
             string Val;
 
             //While reading the XML store the values in array
             while (errorReader.Read())
             {
-                //Dont add value to array if the element is not on this list
+                if (pass == 0)
+                {
+                    //Dont add value to array if the element is not on this list
                     switch (errorReader.Name)
                     {
                         case "Error":
-                         errorReader.Read();
+                            errorReader.Read();
                             Val = errorReader.Value;
                             aryError[x] = Convert.ToDouble(Val);
                             //+1 in array
                             x = x + 1;
+                            pass = 1;
                             break;
-                    case "PrinterName":
+                        case "PrinterName":
                             errorReader.Read();
                             Val = errorReader.Value;
                             aryPrinter[y] = Val.ToString();
                             //+1 in array
                             y = y + 1;
+                            pass = 1;
                             break;
                     }
+                }
+                else
+                {
+                    pass = 0;
+                }
             }
             //Close reader
             errorReader.Close();
